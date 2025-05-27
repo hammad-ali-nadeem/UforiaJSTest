@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uforia JavaScript Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+  <div class="container mx-auto px-4 py-8">
+    <header class="text-center mb-8">
+      <h1 class="text-4xl font-bold text-indigo-700 mb-2">Uforia JavaScript Test</h1>
+      <p class="text-lg text-gray-600">Demonstration of JavaScript utility functions</p>
+    </header>
+
+    <div class="bg-white rounded-lg shadow-md p-6 max-w-3xl mx-auto">
+      <div class="space-y-6">
+        <!-- Function 1: Deep Clone -->
+        <div class="p-4 border border-gray-200 rounded-lg">
+          <h2 class="text-xl font-semibold mb-2">1. Deep Clone</h2>
+          <button onclick="testDeepClone()" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">Test Deep Clone</button>
+          <div id="deepCloneResult" class="result-container mt-3 p-3 bg-gray-50 rounded text-sm font-mono hidden"></div>
+        </div>
+
+        <!-- Function 2: Debounce -->
+        <div class="p-4 border border-gray-200 rounded-lg">
+          <h2 class="text-xl font-semibold mb-2">2. Debounce Function</h2>
+          <button onclick="testDebounce()" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">Test Debounce</button>
+          <div id="debounceResult" class="result-container mt-3 p-3 bg-gray-50 rounded text-sm font-mono hidden"></div>
+        </div>
+
+        <!-- Function 3: Flatten Array -->
+        <div class="p-4 border border-gray-200 rounded-lg">
+          <h2 class="text-xl font-semibold mb-2">3. Flatten Nested Array</h2>
+          <button onclick="testFlatten()" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">Test Flatten</button>
+          <div id="flattenResult" class="result-container mt-3 p-3 bg-gray-50 rounded text-sm font-mono hidden"></div>
+        </div>
+
+        <!-- Function 4: Deep Equality -->
+        <div class="p-4 border border-gray-200 rounded-lg">
+          <h2 class="text-xl font-semibold mb-2">4. Deep Equality</h2>
+          <button onclick="testDeepEqual()" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">Test Deep Equality</button>
+          <div id="deepEqualResult" class="result-container mt-3 p-3 bg-gray-50 rounded text-sm font-mono hidden"></div>
+        </div>
+
+        <!-- Function 5: String to Camel Case -->
+        <div class="p-4 border border-gray-200 rounded-lg">
+          <h2 class="text-xl font-semibold mb-2">5. String to Camel Case</h2>
+          <button onclick="testToCamelCase()" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">Test Camel Case</button>
+          <div id="camelCaseResult" class="result-container mt-3 p-3 bg-gray-50 rounded text-sm font-mono hidden"></div>
+        </div>
+
+        <!-- Function 6: Memoize -->
+        <div class="p-4 border border-gray-200 rounded-lg">
+          <h2 class="text-xl font-semibold mb-2">6. Memoize Function</h2>
+          <button onclick="testMemoize()" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">Test Memoize</button>
+          <div id="memoizeResult" class="result-container mt-3 p-3 bg-gray-50 rounded text-sm font-mono hidden"></div>
+        </div>
+
+        <!-- Function 7: Parse Query String -->
+        <div class="p-4 border border-gray-200 rounded-lg">
+          <h2 class="text-xl font-semibold mb-2">7. Parse Query String</h2>
+          <button onclick="testParseQuery()" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">Test Parse Query</button>
+          <div id="parseQueryResult" class="result-container mt-3 p-3 bg-gray-50 rounded text-sm font-mono hidden"></div>
+        </div>
+
+        <!-- Function 8: Curry -->
+        <div class="p-4 border border-gray-200 rounded-lg">
+          <h2 class="text-xl font-semibold mb-2">8. Curry Function</h2>
+          <button onclick="testCurry()" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">Test Curry</button>
+          <div id="curryResult" class="result-container mt-3 p-3 bg-gray-50 rounded text-sm font-mono hidden"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+  <style>
+
+  </style>
+</body>
+</html>
