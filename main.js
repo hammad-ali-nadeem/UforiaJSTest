@@ -118,7 +118,6 @@ function testDeepClone() {
   showResult('deepCloneResult', {
     original,
     cloned,
-    isSameReference: original.b === cloned.b,
     isDeepEqual: deepEqual(original, cloned)
   });
 }
@@ -144,6 +143,9 @@ function testDeepEqual() {
   const obj2 = { a: 1, b: { c: 2 } };
   const obj3 = { a: 1, b: { c: 3 } };
   showResult('deepEqualResult', {
+    "object1": obj1,
+    "object2": obj2,
+    "object3": obj3,
     'obj1 vs obj2': deepEqual(obj1, obj2),
     'obj1 vs obj3': deepEqual(obj1, obj3)
   });
@@ -161,10 +163,15 @@ function testMemoize() {
   const memoAdd = memoize((a, b) => a + b);
   const firstCall = memoAdd(2, 3);
   const secondCall = memoAdd(2, 3);
+  const thirdCall = memoAdd(3, 4); 
   showResult('memoizeResult', {
     firstCall,
     secondCall,
-    isSame: firstCall === secondCall
+    thirdCall,
+    'firstCall === secondCall': firstCall === secondCall,
+    isSame: firstCall === secondCall,
+    'firstCall !== thirdCall': firstCall !== thirdCall,
+    isDifferent: firstCall !== thirdCall
   });
 }
 
